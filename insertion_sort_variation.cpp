@@ -33,7 +33,7 @@ std::vector<T> take_random_vector(int length, T min_rand_value, T max_rand_value
     random_device rnd_device;
     mt19937 mersenne_engine(rnd_device());
     uniform_int_distribution<T> dist(min_rand_value, max_rand_value);
-    auto gen = std::bind(dist, mersenne_engine); // returns rundom numbers
+    auto gen = std::bind(dist, mersenne_engine); // returns random numbers
     vector<T> a;
     a.resize(length);
     generate(a.begin(), a.end(), gen);
