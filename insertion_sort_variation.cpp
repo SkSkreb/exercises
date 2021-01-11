@@ -53,7 +53,7 @@ int main()
     auto a_end_fptr = [&a]{return a.end();}; //returns ptr to lambda function-member vector::end
     insertion_sort_variation([&a]{return std::begin(a);}, a_end_fptr); // sort
     std::sort(b.begin(),b.end()); //sorted vector
-    if(a!=b) throw 60; // test vector compare. 56 -- is a number of this line
+    if(a!=b) throw 56; // test vector compare. 56 -- is a number of this line
     constexpr int COLUMNS{7}; //print like list of n COLUMNS; n = 7
     unsigned int counter{0};
     for(auto element: a)
